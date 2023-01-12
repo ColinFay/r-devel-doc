@@ -17,7 +17,7 @@ I suggest you rebuild the container every time so you have a latest version of s
 
 ```
 # Build the docker image
-docker build -t rsourcebuilder .
+docker build -t rsourcebuilder --no-cache .
 # Launch the image and let it hang, so that we can enter it via VSCode
 docker run -d rsourcebuilder tail -f &> /dev/null
 # Wait some time for the container to launch
@@ -50,5 +50,3 @@ bash ./build.sh # (Note that the build can take some time)
 ```
 
 The script will also run the tests.
-
-8. If everything works as expected,
